@@ -1,0 +1,24 @@
+# Use the official Python image from the Docker Hub
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Create a directory for the app
+WORKDIR /code
+
+# Copy only the requirements file first
+COPY requirements.txt /code/
+
+# Install dependencies
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Copy the entire project into the /code directory
+COPY . /code/
+
+# Set the default command to run the Celery Beat scheduler
+CMD ["celery", "-A", "HemoHub.celery_app", "beat", "--loglevel=info"]
+
+
+

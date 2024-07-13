@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIIMS Blood Bank - Blood Donation Camps</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .navbar-custom {
+            background-color: #f8f9fa !important; /* Content background color */
+            color: black; /* Text color */
+        }
+        .navbar-custom .navbar-brand {
+            color: #000 !important; /* Dark color */
+        }
+        .navbar-custom .navbar-nav .nav-link, 
+        .navbar-custom .navbar-nav .dropdown-toggle {
+            color: #555 !important; /* Light color */
+        }
+        .navbar-custom .navbar-nav .nav-link:hover, 
+        .navbar-custom .navbar-nav .dropdown-toggle:hover {
+            color: #000 !important; /* Darker color on hover */
+        }
+        .sidebar {
+            height: 100vh;
+            width: 200px;
+            position: fixed;
+            top: 56px; /* Height of the main navbar */
+            left: 0;
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f8f9fa;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575d63;
+        }
+        .content {
+            margin-left: 200px; /* Same as the width of the sidebar */
+            margin-top: 56px; /* Height of the main navbar */
+            padding: 20px;
+            height: calc(100vh - 56px);
+            overflow-y: auto;
+            text-align: center; /* Center align the content */
+        }
+        .content h2 {
+            margin-bottom: 20px;
+        }
+        .content .camp-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .content .camp-card h4 {
+            margin-bottom: 10px;
+        }
+        .content .camp-card p {
+            margin-bottom: 5px;
+        }
+        .content .camp-card .btn-primary {
+            background-color: #b71c1c;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        .content .camp-card .btn-primary:hover {
+            background-color: #963232;
+        }
+        .notification-icon {
+            position: relative;
+            cursor: pointer;
+            margin-left: 15px; /* Space between icon and account dropdown */
+            color: #555 !important; /* Light color */
+        }
+        .notification-icon:hover {
+            color: #000 !important; /* Darker color on hover */
+        }
+        .notification-icon .fas {
+            font-size: 1.5rem;
+        }
+        .notification-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <a class="navbar-brand" href="#">Red Cross Blood Bank</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="redcross.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="redcross_about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="redcross_contact.html">Contact Us</a></li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown">
+                    Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                    <a class="dropdown-item" href="redcross_profile.html">Profile</a>
+                    <a class="dropdown-item" href="redcross_logout.html">Logout</a>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="redcross_dashboard.html">Dashboard</a>
+    <a href="redcross_donors_list.html">Donors List</a>
+    <a href="redcross_blood_stock.html">Blood Stock</a>
+    <a href="redcross_donor_registration.html">Donor Registration</a>
+    <a href="redcross_request_blood.html">Request Blood</a>
+    <a class="nav-link active" href="redcross_blood_donation_camps.html">Blood Donation Camps</a>
+</div>
+
+<!-- Content -->
+<div class="content">
+    <h2>Blood Donation Camps</h2>
+    <div class="camp-card">
+        <h4>Camp at NIIMS Hospital</h4>
+        <p>Date: June 20, 2024</p>
+        <p>Time: 10:00 AM - 4:00 PM</p>
+        <p>Location: NIIMS Hospital, Lakdikapul, Hyderabad</p>
+        <a href="#" class="btn btn-primary">Register</a>
+    </div>
+    <div class="camp-card">
+        <h4>Camp at Kamineni Hospital</h4>
+        <p>Date: July 5, 2024</p>
+        <p>Time: 9:00 AM - 3:00 PM</p>
+        <p>Location: Kamineni Hospital, Kothapet, Hyderabad</p>
+        <a href="#" class="btn btn-primary">Register</a>
+    </div>
+    <div class="camp-card">
+        <h4>Camp at Osmania College</h4>
+        <p>Date: August 10, 2024</p>
+        <p>Time: 11:00 AM - 5:00 PM</p>
+        <p>Location: Osmania College, Amberpet, Hyderabad</p>
+        <a href="#" class="btn btn-primary">Register</a>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

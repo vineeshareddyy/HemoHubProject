@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company 2 Blood Bank - Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .navbar-custom {
+            background-color:blue !important; /* Content background color */
+            color: white; /* Text color */
+            padding:20px;
+        }
+        .navbar-custom .navbar-brand {
+            color: white !important; /* Dark color */
+        }
+        .navbar-custom .navbar-nav .nav-link, 
+        .navbar-custom .navbar-nav .dropdown-toggle {
+            color: #b3b3ff !important; /* Light color */
+        }
+        .navbar-custom .navbar-nav .nav-link:hover, 
+        .navbar-custom .navbar-nav .dropdown-toggle:hover {
+            color: white !important; /* Darker color on hover */
+        }
+        .sidebar {
+            height: 100vh;
+            width: 200px;
+            position: fixed;
+            top: 80px; /* Height of the main navbar */
+            left: 0;
+            background-color: #000066;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #b3b3ff;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #0000cc;
+        }
+        .content {
+            margin-left: 200px; /* Same as the width of the sidebar */
+            margin-top: 56px; /* Height of the main navbar */
+            padding: 20px;
+            height: calc(100vh - 56px);
+            overflow-y: auto;
+        }
+        /* Additional specific styles for profile page content */
+        .profile-section {
+            padding: 50px;
+            background-color: #e9ecef;
+            text-align: center;
+        }
+        .profile-section h2 {
+            color: #0000cc; /* Blue color */
+        }
+        .profile-section p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .profile-section img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+        .profile-details {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .profile-details h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .profile-details p {
+            color: #555;
+            margin: 10px 0;
+        }
+        .notification-icon {
+            position: relative;
+            cursor: pointer;
+            margin-left: 15px; /* Space between icon and account dropdown */
+            color: #b3b3ff !important; /* Light color */
+        }
+        .notification-icon:hover {
+            color: white !important; /* Darker color on hover */
+        }
+        .notification-icon .fas {
+            font-size: 1.5rem;
+        }
+        .notification-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <a class="navbar-brand" href="#">Medwin Blood Bank</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="company2_dashboard.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="company2_about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="company2_contact.html">Contact Us</a></li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown">
+                    Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                    <a class="dropdown-item" href="company2_profile.html">Profile</a>
+                    <a class="dropdown-item" href="company2_logout.html">Logout</a>
+                </div>
+            </li>
+           
+        </ul>
+    </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="company2_dashboard.html">Dashboard</a>
+    <a href="company2_donors_list.html">Donors List</a>
+    <a href="company2_blood_stock.html">Blood Stock</a>
+    <a href="company2_donor_registration.html">Donor Registration</a>
+    <a href="company2_request_blood.html">Request Blood</a>
+    <a href="company2_blood_donation_camps.html">Blood Donation Camps</a>
+</div>
+
+<!-- Content -->
+<div class="content">
+    <div class="profile-section">
+        <h2>User Profile</h2>
+        <img src="user_profile_image.jpg" alt="User Image">
+        <div class="profile-details">
+            <h3>Shruthi Shetty</h3>
+            <p><strong>Email:</strong> shetty@gmail.com</p>
+            <p><strong>Phone:</strong> 9032844072</p>
+            <p><strong>Address:</strong> 11-15-33/1/A, Hyderabad, Telangana</p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

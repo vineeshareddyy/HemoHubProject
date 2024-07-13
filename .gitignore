@@ -1,0 +1,1 @@
+"Python *.pyc *.pyo *.pyd __pycache__/ *.db *.sqlite3 .venv/ venv/ djangoceleryenv/ *.sublime-workspace *.sublime-project *.idea/ *.vscode/ .DS_Store Thumbs.db staticfiles/ *.env" 

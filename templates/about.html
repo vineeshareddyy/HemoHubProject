@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content%}
+<main1>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="{% static 'images/signup-image.png'%}" alt="About Us Image">
+        </div>
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>Welcome to HemoHub. We are dedicated to providing the best service possible.</p>
+            <h2>Our Mission</h2>
+            <p>Our mission is to ensure that no blood gets wasted and is completely used before its expiration date by generating alert </p>
+            <p>notifications .</p>
+            <h2>Our Team</h2>
+            <p>We have a diverse team committed to achieving our goals.</p>
+        </div>
+    </div>
+    <div class="team-container">
+        <h1>OUR TEAM</h1>
+        <div class="team-cards">
+            <div class="card">
+                <!--<img src="team-member1.png" alt="Team Member 1">-->
+                <h3>CHINTHAKUNTLA VINEESHA</h3>
+                <p>2451-21-737-130</p>
+                <p>Contact no:707502667</p>
+            </div>
+            <div class="card">
+                <!--<img src="team-member2.png" alt="Team Member 2">-->
+                <h3>CH.N.L.M VAMSI</h3>
+                <p>2451-21-737-131</p>
+                <p>Contact no:9133044819</p>
+            </div>
+            <div class="card">
+                <!--<img src="team-member3.png" alt="Team Member 3">-->
+                <h3>UPPARA NAGAMANI</h3>
+                <p>2451-21-737-152</p>
+                <p>Contact no:9182802552</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2024 HemoHub. All rights reserved.</p>
+    <p>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Service</a>
+    </p>
+</footer>
+</body>
+</html>
+{% endblock content%}

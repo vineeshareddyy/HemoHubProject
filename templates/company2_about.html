@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company 2 Blood Bank - About Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar-custom {
+            background-color:blue !important;
+            color: white;
+            padding:20px;
+        }
+        .navbar-custom .navbar-brand {
+            color: white !important;
+        }
+        .navbar-custom .navbar-nav .nav-link, 
+        .navbar-custom .navbar-nav .dropdown-toggle {
+            color: white !important;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 220px;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            background-color: #00264d;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #b3c6ff;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #0059b3;
+            color: white;
+        }
+        .content {
+            margin-left: 220px;
+            margin-top: 56px;
+            padding: 20px;
+            height: calc(100vh - 56px);
+            overflow-y: auto;
+            background-color: #e9f0ff;
+        }
+        .about-section {
+            padding: 50px;
+            background-color: #d9e6ff;
+            text-align: center;
+        }
+        .about-section h2 {
+            color: #003366;
+        }
+        .about-section p {
+            color: #00264d;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .about-section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .notification-icon {
+            position: relative;
+            cursor: pointer;
+            margin-left: 15px;
+            color: white !important;
+        }
+        .notification-icon:hover {
+            color: #ffcc00 !important;
+        }
+        .notification-icon .fas {
+            font-size: 1.5rem;
+        }
+        .notification-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ffcc00;
+            color: #00264d;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <a class="navbar-brand" href="#">Medwin  Blood Bank</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="company2_dashboard.html">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="company2_about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="company2_contact.html">Contact Us</a></li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown">
+                    Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                    <a class="dropdown-item" href="company2_profile.html">Profile</a>
+                    <a class="dropdown-item" href="company2_logout.html">Logout</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">0</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="company2_dashboard.html">Dashboard</a>
+    <a href="company2_donors_list.html">Donors List</a>
+    <a href="company2_blood_stock.html">Blood Stock</a>
+    <a href="company2_donor_registration.html">Donor Registration</a>
+    <a href="company2_request_blood.html">Request Blood</a>
+    <a href="company2_blood_donation_camps.html">Blood Donation Camps</a>
+</div>
+
+<!-- Content -->
+<div class="content">
+    <div class="about-section">
+        <h2>About Us</h2>
+        <img src="https://medwin.co.ke/wp-content/uploads/2022/10/logo-sticky.png" alt="About Us Image">
+        <p>Medwin Blood Bank is dedicated to providing a reliable and efficient blood supply for patients in need. We work tirelessly to ensure that blood is available when and where it is needed the most.</p>
+        <p>Our team is committed to supporting blood donation through various initiatives, including blood donation camps, donor registration drives, and educational programs aimed at raising awareness about the importance of blood donation.</p>
+        <p>We believe in the power of community and the impact of collective effort. Join us in our mission to save lives and support those in need by becoming a blood donor or volunteering your time and resources.</p>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

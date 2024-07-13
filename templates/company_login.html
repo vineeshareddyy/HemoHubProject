@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main2>
+    <div class="signup-container">
+        <div class="signup-image">
+            <img src="{% static 'images/signup-image.png' %}" alt="Login Image">
+        </div>
+        <div class="signup-form-container">
+            <h2>Create an Account</h2>
+            
+                <form method="POST" style="display:flex; flex-direction:column; gap:10px;" action="{% url 'company_login' %}">
+                    {% csrf_token %}
+                    <input style="padding:10px" type="text" name="username" placeholder="Username" required>
+                    <input style="padding:10px" type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+           
+            <br>
+          
+        </div>
+    </div>
+</main2>
+{% endblock content %}

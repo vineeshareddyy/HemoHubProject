@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content%}
+<main1>
+    <div class="contact-container">
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Full Name">
+                    <input type="email" id="email" name="email" placeholder="Email ID">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="contact" name="contact" placeholder="Contact No">
+                    <input type="text" id="city" name="city" placeholder="City">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Message"></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@hemohub.com</p>
+            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 7075026667</p>
+            <p><i class="fas fa-globe"></i> <strong>Website:</strong> www.hemohub.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Blood Drive, Hemocity.</p>
+        </div>
+    </div>
+</main1>
+<footer>
+    <p>&copy; 2024 HemoHub. All rights reserved.</p>
+    <p>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Service</a>
+    </p>
+</footer>
+</body>
+</html>
+{% endblock content%}
